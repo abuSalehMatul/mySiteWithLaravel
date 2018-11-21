@@ -1,0 +1,96 @@
+/***************************
+    This is the file od dark style of this theme
+***************************/
+
+/*main rules*/
+h1, h2, h3, h4, h5 {color:#fff}
+section h2.h1 {color:#fff}
+section span.h-span {color:#c0c4d6}
+p {color:#c0c4d6}
+
+/*nav*/
+@media (min-width: 992px) {
+    .background-style {
+        background-color: #161922;
+    }
+}
+
+/*div menu*/
+.menu {
+    background-color:#161922;
+    -webkit-box-shadow:0px 0px 6px #333;
+    -moz-box-shadow:0px 0px 6px #333;
+    -ms-box-shadow:0px 0px 6px #333;
+    -o-box-shadow:0px 0px 6px #333;
+    box-shadow:0px 0px 6px #333;
+}
+.menu .menu-list li a i {background-color:#161922; color:#fff}
+.menu .menu-list li a span {
+    background-color:#161922;
+    color:#fff;
+    -webkit-box-shadow:0px 0px 6px #333;
+    -moz-box-shadow:0px 0px 6px #333;
+    -ms-box-shadow:0px 0px 6px #333;
+    -o-box-shadow:0px 0px 6px #333;
+    box-shadow:0px 0px 6px #333;
+}
+
+
+/*section about*/
+.about {background-color:#161922}
+.about .about-bio {color:#c0c4d6}
+.about .details li {color:#c0c4d6}
+.about .details li span {color:#fff}
+
+/*section skills*/
+.skills {background-color:#191d28}
+.skills .sk-header,
+.skills .bar span,
+.skills span.circ-header {color:#fff}
+.skills .progressbar-text {color:#c0c4d6 !important}
+
+/*section services*/
+.services {background-color:#161922}
+.services .serv-box p {color:#c0c4d6}
+
+/*section portfolio*/
+.portfolio {background-color:#191d28}
+.portfolio .port-list li {color:#fff}
+
+/*section blogs*/
+.blogs {background-color:#161922}
+.blogs .blog-box {box-shadow: -1px -1px 10px #191d28}
+.blogs .blog-box h3 {color:#fff}
+.blogs .blog-box p {color:#c0c4d6}
+
+/*div count*/
+.count {background-color:#191d28}
+.count h3 {color:#fff}
+
+/*section resume*/
+.resume {background-color:#161922}
+.resume .resume-box .content h4.h3 {color:#fff}
+.resume .resume-box .content p.info {color:#c0c4d6}
+
+/*section previews*/
+.previews {background-color:#191d28}
+.previews .item {background-color:#161922}
+.previews .item .item-p {color:#c0c4d6}
+
+/*div supporters*/
+.supporters {background-color:#161922}
+
+/*sectoin contacts*/
+.contacts {background-color:#191d28}
+.contacts .contact-box {background-color:#161922}
+.contacts .contact-box .contact-info p.bio {color:#c0c4d6}
+.contacts form input , .contacts form textarea {background-color:#161922}
+.contacts form input[type="text"], .contacts form input[type="email"], .contacts form textarea {color:#c0c4d6 !important}
+
+/*footer*/
+footer {background-color:#161922}
+
+/*div loading*/
+.loading {background-color:#191d28}
+.loading .center-element .circle {border:2px solid #fff}
+.loading .center-element .circle span {background-color:#fff}

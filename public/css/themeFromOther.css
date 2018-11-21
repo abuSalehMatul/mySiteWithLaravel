@@ -1,0 +1,81 @@
+/***********
+    this is color scheme file that contain the color of template (driftwood) the hex of the color is (#e10a6f) and rgb is ((225,10,111)) use this website --> (http://www.color-hex.com/) to change your color scheme
+***********/
+/*selection*/
+::-moz-selection {background-color:#e10a6f}
+::selection {background-color:#e10a6f}
+
+/*start property color*/
+.link:hover,
+.reverse-link,
+.menu .menu-list li a span:hover,
+header .arrow div:hover,
+header .container .content p.position,
+.about .link .icon i,
+.about p.desc,
+.about .reverse-link:hover .icon i,
+.about .reverse-link:hover .icon i,
+.services .serv-box h3,
+.portfolio .port-list li:hover,
+.portfolio .port-card .card-hover .card-info .icons i:hover,
+.blogs .blog-box a:hover,
+.count span.timer,
+.blogs .blog-box h4,
+.previews .item .figure i,
+.previews .item p.desc,
+.previews .item .rate .qoute,
+.resume .resume-box .content p.f-header,
+.contacts form input[type="submit"]:hover,
+footer p span,
+footer .social-media a:hover,
+a.scroll-top:hover i
+{
+    color:#e10a6f
+}
+/*end property color*/
+
+/*start property background color*/
+.link,
+.reverse-link:hover,
+section h2.h1 span.underline,
+section h2.h1 span.underline span,
+nav.nav-bar .menu-icon:hover span,
+.menu .menu-list li a:hover i,
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.about h2.sub-header:after,
+.about .details li:before,
+.about .link:hover .icon,
+.about .reverse-link .icon,
+.portfolio .port-list li.active,
+.blogs .blog-box a,
+.resume .resume-box .content h4.h3:before,
+.contacts .contact-box .contact-icon,
+.contacts form input[type="submit"],
+.loading .center-element .ball,
+a.scroll-top
+{
+    background-color:#e10a6f
+}
+/*end property background color*/
+
+/*start property border*/
+.link,
+.reverse-link,
+header .arrow div:hover,
+.portfolio .port-list li.active
+{
+    border:2px solid #e10a6f
+}
+
+/*border-color*/
+header .owl-theme .owl-dots .owl-dot.active,
+header .owl-theme .owl-dots .owl-dot:hover,
+.services .serv-box:hover,
+.contacts form input[type="submit"]
+{
+    border-color:#e10a6f
+}
+
+.about img {border:5px solid #e10a6f}
+
