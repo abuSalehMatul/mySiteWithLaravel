@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\User;
 
 class mgsfromMetoClient extends Mailable
 {
@@ -16,9 +17,10 @@ class mgsfromMetoClient extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $user;
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -28,6 +30,7 @@ class mgsfromMetoClient extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('matul@salehmatul.com')
+                     ->view('email.toClient');
     }
 }

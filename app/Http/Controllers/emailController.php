@@ -17,7 +17,8 @@ class emailController extends Controller
     public function sendEmail(Request $request){
      $this->validate($request,[
             'email'=>'required|email',
-            'message'=>'required|min:5'
+            'message'=>'required',
+            'fullname'=>'required'
 
      ]);
      
@@ -40,7 +41,7 @@ class emailController extends Controller
        Session::put('email',$data['email']);
        Session::put('name',$data['name']);
        Session::put('ip',$serveraddress);
-       return Redirect('/');
+       return Redirect('/toClient');
        
 
     }

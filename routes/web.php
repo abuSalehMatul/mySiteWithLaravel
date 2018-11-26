@@ -15,8 +15,5 @@
 Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 Route::post('/contact','emailController@sendEmail');
+Route::get('/toClient', 'HomeController@toEmail');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
