@@ -488,9 +488,9 @@
 								<input id="email" type="email" name="email" autocomplete="email" placeholder="Email" />
 							</div>
 							<textarea id="message" placeholder="Message" name="message"></textarea>
-							<div  class="btn">
+							
 								<input type="submit"<span><i class="fa fa-location-arrow"></i> Send Message</span>>
-							</div>
+							
 						</div>
 					</form>
 					<div id="response_brought"></div>

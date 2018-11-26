@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Mail\viwer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+
 use Mail;
 use App\User;
 use Auth;
@@ -20,7 +22,8 @@ class emailController extends Controller
        $user->name=$data['name'];
        $user->mgsbody=$data['mgsbody'];
        $user->save();
-       Mail::to($user)->send(new viwer($user));
+       Mail::to('matul@salehmatul.com')->send(new viwer($user));
+       return Redirect('/');
        
 
     }
