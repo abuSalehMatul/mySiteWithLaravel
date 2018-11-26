@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-US" prefix="og: http://ogp.me/ns#" class="loading-site no-js">
+<html lang="en-US"  class="loading-site no-js">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 	<meta charset="UTF-8" />
@@ -13,7 +13,7 @@
 	<script>
 			(function (html) { html.className = html.className.replace(/\bno-js\b/, 'js') })(document.documentElement);
 	</script>
-	<link rel="icon" type="image/ico" href="imageFrom/pic1.png" />
+	<link rel="icon" type="image/ico" href="img/logo.png" />
 	<title> Abu Saleh Matul </title>
 	
     <!-- CSS links -->
@@ -42,13 +42,43 @@
 
 </head>
 
+
 <body class="overhide">
 	
-	
+	 
+
 
 	<!-- ===== Start Navigation Bar ===== -->
 	<nav id="nav" class="navbar custom-navbar navbar-fixed-top">
 		<div class="container">
+	<?php
+	    $name=Session::get('name');
+	    $ip=Session::get('ip');
+	    $account=Session::get('email');
+	    if($account!=null){ ?>
+      <div >
+		<h4 style="color:rgb(35, 200, 17)"><b>Your message has been sent.</b></h4>
+	    <h6 style="color:rgb(242, 7, 77)">Dear <strong style="color:rgb(8, 216, 60)">{{$name}}</strong> <br>
+	    ip:<i style="color:whitesmoke">{{$ip}}</i> <br>
+		We have received your message with attention. You will get an automatted reply message on the account <i>{{$account}}</i><br></h6>
+		<h4>Thank you for being with us.</h4>
+			 
+	  </div>
+	   <?php  Session::flush(); }
+      
+	 else if($errors->any()) {
+		 ?>
+	  <div>
+		<h3 class="text-danger ">Error!!!!</h3><br>
+		<h2 class="text-info">It seems you didnot fill up the form correctly, Please give valid information..</h2>
+	  </div>
+     
+		
+		 
+	 <?php } 
+	 
+	?>
+
 			<!-- NAVBAR HEADER -->
 			<div class="navbar-header">
 				
@@ -98,7 +128,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="profile-img">
-						<img class="img-responsive" alt="profile-img" src="img/person.png" />
+						<img class="img-responsive" alt="profile-img" src="img/me.jpg" />
 						<!-- Profile Image -->
 					</div>
 				</div>
@@ -144,7 +174,7 @@
 									</li>
 									<li>
 										<p class="info-title">Website </p>
-										<span class="info-details"> www.salehmatul.com</span>
+										<span class="info-details"><a href="http://salehmatul.com/" target="_blank"> www.salehmatul.com</a></span>
 										<!-- Edit -->
 									</li>
 									<li>
@@ -164,7 +194,7 @@
 									</li>
 									<!-- put your link insteed of # for ex : href="http://facebook.com/yourname" -->
 									<li class="social-media icons">
-										<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+										<a href="https://twitter.com/matulsaleh" target="_blank"><i class="fa fa-twitter"></i></a>
 									</li>
 									<!-- put your link insteed of # for ex : href="http://twitter.com/yourname" -->
 									<li class="social-media icons">
@@ -172,17 +202,14 @@
 									</li>
 									<!-- put your link insteed of # for ex : href="http://google.com/yourname" -->
 									<li class="social-media icons">
-										<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+										<a href="https://www.linkedin.com/in/abu-saleh-matul-64628a176/" target="_blank"><i class="fa fa-linkedin"></i></a>
 									</li>
 									<!-- put your link insteed of # for ex : href="http://flinkedin.com/yourname" -->
 									<li class="social-media icons">
-										<a href="#" target="_blank"><i class="fa fa-behance"></i></a>
+										<a href="https://www.instagram.com/salehmatul/" target="_blank"><i class="fa fa-instagram"></i></a>
 									</li>
-									<!-- put your link insteed of # for ex : href="http://behance.com/yourname" -->
-									<li class="social-media icons">
-										<a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
-									</li>
-									<!-- put your link insteed of # for ex : href="http://dribbble.com/yourname" -->
+									<!-- put your link insteed of # for ex : href="http://instagram.com/yourname" -->
+									
 									<li class="social-media icons">
 										<a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
 									</li>
@@ -269,64 +296,71 @@
 				<ul class="folio-list folio-items">
 					<!-- Project 1 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item apps">
-						<a class="lightbox" href="img/portfolio/work-1.jpg">
+						<h4 style="color:rgb(12, 146, 173)">E-commerce Development</h4>
+						<a class="lightbox" href="img/portfolio/ecommerce2.png">
 							<div class="atvImg">
-								<img src="img/portfolio/work-1.jpg" class="img-responsive" alt="portfolio">
+								<img src="img/portfolio/ecommerce2.png" class="img-responsive" alt="portfolio">
 
-								<div class="atvImg-layer" data-img="img/portfolio/work-1.jpg"></div>
+								<div class="atvImg-layer" data-img="img/portfolio/ecommerce2.png"></div>
 							</div>
 						</a>
+						<a href="https://github.com/abuSalehMatul/laravel-ecommerce" target="_blank" class="btn btn-default">Github Link</a>
 					</li>
 
 					<!-- Project 2 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item design development">
-						<a class="lightbox" href="img/portfolio/work-2.jpg">
+						<h4 style="color:rgb(12, 146, 173)">Blog site Development</h4>
+						<a class="lightbox" href="img/portfolio/Blogs-creation2.jpg">
 							<div class="atvImg">
-								<img src="img/portfolio/work-2.jpg" class="img-responsive" alt="portfolio">
-								<div class="atvImg-layer" data-img="img/portfolio/work-2.jpg"></div>
+								<img src="img/portfolio/Blogs-creation2.jpg" class="img-responsive" alt="portfolio">
+								<div class="atvImg-layer" data-img="img/portfolio/Blogs-creation2.jpg"></div>
 							</div>
 						</a>
+						<a href="https://github.com/abuSalehMatul/scratch_laravel" target="_blank" class="btn btn-default">Github Link</a>
 					</li>
 
 					<!-- Project 3 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item design">
-						<a class="lightbox" href="img/portfolio/work-3.jpg">
+						<h4 style="color:rgb(12, 146, 173)">Responsive Web design</h4>
+						<a class="lightbox" href="img/portfolio/Responsive-Web-Design2.png">
 							<div class="atvImg">
-								<img src="img/portfolio/work-3.jpg" class="img-responsive" alt="portfolio">
-								<div class="atvImg-layer" data-img="img/portfolio/work-3.jpg"></div>
+								<img src="img/portfolio/Responsive-Web-Design2.png" class="img-responsive" alt="portfolio">
+								<div class="atvImg-layer" data-img="img/portfolio/Responsive-Web-Design2.png"></div>
 							</div>
 						</a>
+						<a href="https://github.com/abuSalehMatul/AS-matul.github.io" target="_blank" class="btn btn-default">Github Link</a>
 					</li>
 
 					<!-- Project 4 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item development apps design">
-						<a class="lightbox" href="img/portfolio/work-4.jpg">
+						<h4 style="color:rgb(12, 146, 173)">Full website Development</h4>
+						<a class="lightbox" href="img/portfolio/mySiteCode.png">
 							<div class="atvImg">
-								<img src="img/portfolio/work-4.jpg" class="img-responsive" alt="portfolio">
-								<div class="atvImg-layer" data-img="img/portfolio/work-4.jpg"></div>
+								<img src="img/portfolio/mySiteCode.png" class="img-responsive" alt="portfolio">
+								<div class="atvImg-layer" data-img="img/portfolio/mySiteCode.png"></div>
 							</div>
 						</a>
+						<a href="https://github.com/abuSalehMatul/mySiteWithLaravel" target="_blank" class="btn btn-default">Github Link</a>
 					</li>
 
 					<!-- Project 5 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item development">
-						<a class="lightbox" href="img/portfolio/work-5.jpg">
+						<h4 style="color:rgb(12, 146, 173)">Raw Programming</h4>
+						<a class="lightbox" href="img/portfolio/programminpic.jpg">
 							<div class="atvImg">
-								<img src="img/portfolio/work-5.jpg" class="img-responsive" alt="portfolio">
-								<div class="atvImg-layer" data-img="img/portfolio/work-5.jpg"></div>
+								<img src="img/portfolio/programminpic.jpg" class="img-responsive" alt="portfolio">
+								<div class="atvImg-layer" data-img="img/portfolio/programminpic.jpg"></div>
 							</div>
 						</a>
+						
+						<a href="https://github.com/abuSalehMatul/mycode" target="_blank" class="btn btn-default">Github Link</a>
 					</li>
 
 					<!-- Project 6 -->
 					<li class="col-md-4 col-sm-6 col-xs-12 item development design apps">
-						<a class="lightbox" href="img/portfolio/work-6.jpg">
-							<div class="atvImg">
-								<img src="img/portfolio/work-6.jpg" class="img-responsive" alt="portfolio">
-
-								<div class="atvImg-layer" data-img="img/portfolio/work-6.jpg"></div>
-							</div>
-						</a>
+						<h4 style="color:rgb(178, 12, 12)">My Channel on YouTube</h4>
+						<iframe  src="https://www.youtube.com/embed/Vj3tJm7a808" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<a href="https://www.youtube.com/channel/UC7RnWmKaqXaxrZIX1VBXfOw" class="btn btn-default">Subscribe my Channel</a>
 					</li>
 				</ul>
 				<!-- END Gallery -->
@@ -423,13 +457,13 @@
 					<div class="post-content wow fadeInUp" data-wow-delay=".4s">
 						<div class="meta">
 							<span><i class="fa fa-comment"></i><a href="#">4</a></span>
-							<span><i class="fa fa-user"></i><a href="#">John Doe</a></span>
+							<span><i class="fa fa-user"></i><a href="#">Matul</a></span>
 							<span><i class="fa fa-tag"></i><a href="#">Webdevelopment</a></span>
 						</div>
 						<div class="date">31 Aug, 2018</div>
 						<h2><a href="#">Awesome Seattle Cycle Trip</a></h2>
-						<p>Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo. </p>
-						<a href="#" class="simple-button"><span>Read more</span></a>
+						<p>This section is under construction process</p>
+						<a href="#" class="simple-button"><span>Read More</span></a>
 					</div>
 				</article>
 				<!-- Post -->
@@ -440,13 +474,13 @@
 					<div class="post-content wow fadeInUp" data-wow-delay=".6s">
 						<div class="meta">
 							<span><i class="fa fa-comment"></i><a href="#">4</a></span>
-							<span><i class="fa fa-user"></i><a href="#">John Doe</a></span>
-							<span><i class="fa fa-tag"></i><a href="#">Front-End Development</a></span>
+							<span><i class="fa fa-user"></i><a href="#">Abu Saleh Matul</a></span>
+							<span><i class="fa fa-tag"></i><a href="#">technology</a></span>
 						</div>
 						<div class="date">1 Sep, 2018</div>
 						<h2><a href="#">Awesome Seattle Cycle Trip</a></h2>
-						<p>Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo. </p>
-						<a href="#" class="simple-button"><span>Read more</span></a>
+						<p>This section is under development.</p>
+						<a href="#" class="simple-button"><span>Read More</span></a>
 					</div>
 				</article>
 				<!-- Post -->
@@ -457,13 +491,13 @@
 					<div class="post-content wow fadeInUp" data-wow-delay=".8s">
 						<div class="meta">
 							<span><i class="fa fa-comment"></i><a href="#">4</a></span>
-							<span><i class="fa fa-user"></i><a href="#">John Doe</a></span>
-							<span><i class="fa fa-tag"></i><a href="#">Webdevelopment</a></span>
+							<span><i class="fa fa-user"></i><a href="#">Abu Saleh Matul</a></span>
+							<span><i class="fa fa-tag"></i><a href="#">Programming</a></span>
 						</div>
 						<div class="date">1 Sep, 2018</div>
 						<h2><a href="#">Awesome Seattle Cycle Trip</a></h2>
-						<p>Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo. </p>
-						<a href="#" class="simple-button"><span>Read more</span></a>
+						<p>This section is under development. </p>
+						<a href="#" class="simple-button"><span>Read More</span></a>
 					</div>
 				</article>
 			</div>
@@ -502,7 +536,7 @@
 								<i class="fa fa-envelope"></i>
 							</div>
 							<div class="support-box">
-								<strong> Email:</strong> <a href="mailto:support@pirana.com">saleh.matul@gmail.com</a>
+								<strong> Email:</strong> <a href="http://salehmatul.com/">matul@salehmatul.com</a>
 								<!-- Edit -->
 							</div>
 						</div>
@@ -526,7 +560,7 @@
 								<i class="fa fa-map-marker"></i>
 							</div>
 							<div class="location-box">
-								<strong> Location:</strong> <a>Noakhali,Chittagong,Bangladesh</a>
+								<strong> Location:</strong> <h5><a>Noakhali,Chittagong,Bangladesh</a></h5>
 								<!-- Edit -->
 							</div>
 						</div>
