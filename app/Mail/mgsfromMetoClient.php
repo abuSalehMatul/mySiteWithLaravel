@@ -30,7 +30,7 @@ class mgsfromMetoClient extends Mailable
      */
     public function build()
     {
-        return $this->from('matul@salehmatul.com')
+        return $this->from('matulcste@gmail.com')
                      ->view('email.toClient');
     }
 }

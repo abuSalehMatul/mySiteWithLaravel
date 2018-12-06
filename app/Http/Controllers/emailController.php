@@ -36,7 +36,7 @@ class emailController extends Controller
        $user->ip_address=$serveraddress;
        
        $user->save();
-       Mail::to('matul@salehmatul.com')->send(new viwer($user));
+       Mail::to('saleh.matul@gmail.com')->send(new viwer($user));
         
        Session::put('email',$data['email']);
        Session::put('name',$data['name']);

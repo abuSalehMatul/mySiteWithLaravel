@@ -30,7 +30,7 @@ class viwer extends Mailable
      */
     public function build()
     {
-        return $this->from('matul72235@gmail.com')
+        return $this->from('matulcste@gmail.com')
                      ->view('email.defaultEmail');
                       
     }
